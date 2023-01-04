@@ -384,10 +384,12 @@
                 class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                 {{ block.shopify_attributes }}
               >
+                {% comment %}
                 <label class="form__label" for="Quantity-{{ section.id }}">
                   {{ 'products.product.quantity.label' | t }}
                 </label>
-
+                {% endcomment %}
+            
                 <quantity-input class="quantity">
                   <button class="quantity__button no-js-hidden" name="minus" type="button">
                     <span class="visually-hidden">
@@ -514,9 +516,11 @@
                   >
                     {%- for option in product.options_with_values -%}
                       <div class="product-form__input product-form__input--dropdown">
+                      {% comment %}
                         <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
                           {{ option.name }}
                         </label>
+                      {% endcomment %}
                         <div class="select">
                           <select
                             id="Option-{{ section.id }}-{{ forloop.index0 }}"
@@ -634,8 +638,12 @@
                           </svg>
                         </div>
                       </button>
+                    <h6>test</h6>
                       {%- if block.settings.show_dynamic_checkout -%}
+                        <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded" onclick="document.querySelector('[data-testid]').click();">👉 Checkout Now</button>
+                        <div style="display:none;">
                         {{ form | payment_button }}
+                        </div>
                       {%- endif -%}
                     </div>
                   {%- endform -%}
