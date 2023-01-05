@@ -1491,3 +1491,36 @@ min-width: 150px;
   height: 15px !important; 
   fill: #60cc65;
 }
+
+#Quantity-template--17427964002578__main:focus {
+  background: #000;
+  color: #fff !important;
+  font-size: 20px;
+  line-height: 18px;
+ font-weight: 700;
+}
+
+
+
+
+
+
+@media only screen and (max-width:700px){
+  .price-item.price-item--regular {
+  color: #bfbfbf !important;
+}
+.free-shipping-h3 {
+  padding-top: 20px !important;
+}  
+/* #ProductInfo-template--17427964002578__main {
+  position: relative;
+}
+.free-shipping-h3{
+position: absolute;
+top: 2rem;
+bottom: 0;
+}  
+#custom_var_id {
+  margin-top: 42px !important;
+}   */
+}
