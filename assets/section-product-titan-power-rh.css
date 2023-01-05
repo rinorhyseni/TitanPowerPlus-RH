@@ -1398,7 +1398,7 @@ border: 1px solid #60C655;
   border: none;
   animation: none;
   width: 100%;
-  padding: 25px 20px;
+  padding: 20px 20px;
 }
 .product-form__submit:hover {
   opacity: 0.8;
