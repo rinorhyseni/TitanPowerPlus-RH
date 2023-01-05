@@ -1,3 +1,53 @@
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/raleway-bold-webfont.woff2?v=1672910125') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/raleway-bold-webfont.woff?v=1672910125') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'work_sansthin';
+    src: url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-thin-webfont.woff2?v=1672910750') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-thin-webfont.woff?v=1672910750') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'work_sansbold';
+    src: url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-bold-webfont.woff2?v=1672912278') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-bold-webfont.woff?v=1672912279') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'work_sansmedium';
+    src: url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-medium-webfont.woff2?v=1672920079') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-medium-webfont.woff?v=1672920079') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'work_sanslight';
+    src: url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-light-webfont.woff2?v=1672920813') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-light-webfont.woff?v=1672920812') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'work_sansregular';
+    src: url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-regular-webfont.woff2?v=1672925712') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0698/6888/0146/files/worksans-regular-webfont.woff?v=1672925712') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 .product {
   margin: 0;
 }
@@ -14,6 +64,10 @@
 .product__media-wrapper {
   padding-left: 0;
 }
+.product__media-icon.motion-reduce.quick-add-hidden {
+  display: none !important;
+}
+
 
 @media screen and (min-width: 750px) {
   .product--thumbnail .product__media-gallery,
@@ -57,14 +111,14 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
-    width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
     padding: 0 0 0 4rem;
-    max-width: 35%;
-    width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media).product--right .product__info-wrapper {
@@ -266,12 +320,10 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input .select {
-  max-width: 25rem;
+  max-width: 30rem;
 }
 
-.product-form__submit {
-  margin-bottom: 1rem;
-}
+
 
 .no-js .product-form__submit.button--secondary {
   --color-button: var(--color-base-accent-1);
@@ -385,6 +437,7 @@ a.product__text {
 
   .product__info-container .price--on-sale .price-item--regular {
     font-size: 1.6rem;
+    color: #BFBFBF;
   }
 
   .product__info-container > *:first-child {
@@ -1243,4 +1296,198 @@ a.product__text {
   width: 1.2rem;
   margin-left: 1.2rem;
   flex-shrink: 0;
+}
+
+.extras-items{
+  color: #EFEFEF;
+}
+
+.sale_text{
+  font-family: 'Work Sans';
+  font-weight: 800;
+  color: #60C655;
+}
+
+.amazon_ebay{
+  font-weight: 500;
+  color: #60C655;
+}
+
+.product__info-container > *:first-child {
+  display: flex;
+}
+
+/* .custom-title{
+  font-family: 'Raleway';
+  font-weight: 800;
+  color: #FFFFFF;
+  font-size: 34px;
+  font-style: normal;
+  margin: 8px 0px;
+} */
+.custom-title {
+  font-style: normal;
+  text-decoration: none;
+  color: #EDEDED;
+ font-family: 'ralewaybold';
+  font-weight: 800;
+  font-size: 34px;
+  font-style: normal;
+  margin: 8px 0;
+  line-height: 1.15;
+  padding-bottom: 8px;
+}
+.loox-icon.loox-star {
+  padding-right: 7px;
+}
+.loox-rating span {
+  font-style: normal;
+  color: #ededed;
+   font-family: 'work_sansmedium';
+  line-height: 1.6;
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.extras-items {
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+  color: #EDEDED;
+  font-family: 'work_sanslight';
+  font-size: 21px;
+  line-height: 1.2;
+  margin: 8px 0;
+}
+.sale_text{
+  font-family: 'work_sansbold' !important;
+  line-height: 1.2;
+  font-size: 28px;
+  margin: 13px 0 5px;
+}
+.free-shipping-h3 {
+  font-weight: 700 !important;
+  font-size: 18px !important;
+   color: rgb(255, 255, 255);
+  padding-top: 25px !important;
+   font-family: 'work_sansbold' !important;
+}
+.product-form__submit {
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 700 !important;
+  text-decoration: none;
+}
+.product-form__submit {
+width: 100%;
+padding: 25px 50px;
+border-radius: 20px;
+color: #000000;
+background-color: #35FF2E;
+border: 1px solid #60C655;
+}
+.product-form__submit {
+  font-family: 'work_sansmedium';
+  color: #fff;
+  font-style: normal;
+  font-size: 24px;
+  background-color: #35FF2E;
+  border: none;
+  animation: none;
+  width: 100%;
+  padding: 25px 20px;
+}
+.product-form__submit:hover {
+  opacity: 0.8;
+}
+.select__select{
+background-color: #131313;
+width: 100%;
+color: #efefef;
+border-radius: 10px;
+border: 0.75px solid #fff;
+  border-top-color: rgb(255, 255, 255);
+  border-right-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: rgb(255, 255, 255);
+border-top-color: rgb(255, 255, 255);
+border-right-color: rgb(255, 255, 255);
+border-bottom-color: rgb(255, 255, 255);
+border-left-color: rgb(255, 255, 255);
+padding: 8px 24px 8px 8px;
+font-size: 16px;
+min-width: 150px;
+}
+.select__select:hover {
+  border: 1px solid #60C655;
+}
+.select__select:focus{
+  border-radius: 10px !important;
+}
+.loox-icon.loox-star {
+  padding-right: 11px;
+}
+.select__select {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjUiPjxwYXRoIGZpbGw9IiM5QjlCOUIiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0ibTAgMCA0IDUgNC01eiIvPjwvc3ZnPg==);
+  background-position: right 8px top 50%;
+  background-repeat: no-repeat;
+  background-size: 8px auto;
+}
+
+.quantity__button.no-js-hidden:hover {
+  background-color: #c4c4c4;
+  opacity: 1;
+}
+.quantity__input:not(:focus-visible):not(.focused){
+  font-family: 'work_sansmedium' !important;
+}
+.amazon_ebay span {
+  color: #fff;
+}
+.amazon_ebay {
+  font-family: 'work_sansmedium';
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #60C655;
+  line-height: 1.5;
+  margin: 8px 0;
+  margin-bottom: 25px;
+}
+
+.price-item.price-item--regular {
+  font-family: 'work_sansmedium' !important;
+  font-weight: 400 !important;
+/*   color: #C14444 !important; */
+  font-style: normal !important;
+  text-decoration: line-through !important;
+  font-size: 16px !important;
+}
+
+.price-item.price-item--sale.price-item--last {
+  font-size: 30px !important;
+  font-family: 'work_sansbold' !important;
+  font-weight: 700;
+  color: #60C655;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.shopify-payment-button__button.shopify-payment-button__button--unbranded {
+  font-family: 'work_sansmedium' !important;  
+  font-size: 22px;
+  font-weight: 600;
+}
+.shopify-payment-button__button--unbranded:hover, .shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  background-color: #fff;
+  color: #000;
+  border-radius:10px;
+}
+.quantity__button svg {
+  width: 17px !important; 
+  height: 15px !important; 
+  fill: #60cc65;
 }

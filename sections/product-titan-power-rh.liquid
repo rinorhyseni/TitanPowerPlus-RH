@@ -11,7 +11,7 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-
+  
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -306,11 +306,13 @@
       </media-gallery>
     </div>
     <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}">
-      <a href="#looxReviews"><div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}" data-pattern="[rating] ([count] Reviews)"></div></a>
-      <h2>{{ product.metafields.custom.title }}</h2>
+      <a href="#looxReviews">
+        <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}" data-pattern="[rating] ([count])"></div></a>
+      <h2 class="custom-title">{{ product.metafields.custom.title }}</h2>
       {% for item in product.metafields.custom.extras.value %}
-              <h3>{{ item }}</h3>
+              <h3 class="extras-items">{{ item }}</h3>
               {% endfor %}
+              <h1 class="sale_text">{{ product.metafields.custom.sale_text }}</h1>
       <div
         id="ProductInfo-{{ section.id }}"
         class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}"
@@ -340,6 +342,7 @@
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                <h3 class="free-shipping-h3">{{ product.metafields.custom.free_shipping_text }}</h3>
               </div>
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
@@ -349,9 +352,6 @@
                   {%- if shop.shipping_policy.body != blank -%}
                     {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                   {%- endif -%}
-                <div class="free-shipping-text">
-                <h3 style="font-weight: 700; font-size: 18px; color: black" class="free-shipping-h3">{{ product.metafields.custom.free_shipping_text }}</h3>
-                </div>
                 </div>
               {%- endif -%}
               <div {{ block.shopify_attributes }}>
